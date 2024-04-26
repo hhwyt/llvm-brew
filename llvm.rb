@@ -228,7 +228,7 @@ class Llvm < Formula
       # We build the basic parts of a toolchain to profile.
       # The extra targets on macOS are part of a default Compiler-RT build.
       extra_args = [
-        "-DLLVM_TARGETS_TO_BUILD=Native#{";AArch64;ARM;X86" if OS.mac?}",
+        "-DLLVM_TARGETS_TO_BUILD=Native#{";ARM" if OS.mac?}",
         "-DLLVM_ENABLE_PROJECTS=clang;lld",
         "-DLLVM_ENABLE_RUNTIMES=compiler-rt",
       ]
